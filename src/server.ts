@@ -56,12 +56,12 @@ const parseQuery = (uri: string) => {
   const { pathname, query } = url.parse(decodeURIComponent(uri));
 
   const roomId = pathname?.slice(1) ?? DEFAULT_ID;
-  const username = DEFAULT_NAME;
-  // query
-  //   ?.split('&')
-  //   .map((i) => i.split('='))
-  //   .find((i) => i[0] === 'name')
-  //   ?.at(1) || DEFAULT_NAME;
+  const username =
+    query
+      ?.split('&')
+      .map((i) => i.split('='))
+      .find((i) => i[0] === 'name')
+      ?.at(1) || DEFAULT_NAME;
 
   return { roomId, username };
 };
