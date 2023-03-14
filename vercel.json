@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "name": "customer-service-chat",
+  "builds": [
+    { "src": "src/server.ts", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/src/server.ts" }
+  ]
+}
