@@ -57,11 +57,11 @@ const parseQuery = (uri: string) => {
 
   const roomId = pathname?.slice(1) ?? DEFAULT_ID;
   const username = DEFAULT_NAME;
-    // query
-    //   ?.split('&')
-    //   .map((i) => i.split('='))
-    //   .find((i) => i[0] === 'name')
-    //   ?.at(1) || DEFAULT_NAME;
+  // query
+  //   ?.split('&')
+  //   .map((i) => i.split('='))
+  //   .find((i) => i[0] === 'name')
+  //   ?.at(1) || DEFAULT_NAME;
 
   return { roomId, username };
 };
