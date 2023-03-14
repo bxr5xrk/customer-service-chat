@@ -92,9 +92,9 @@ webSocketServer.on('connection', (webSocket: WebSocket, req: Request) => {
   });
 
   webSocket.on('close', () => {
-    sessions.delete(webSocket);
-    if (sessions.size === 0) {
-      delete rooms[roomId]; // Remove the room when there are no active sessions left
-    }
+    // sessions.delete(webSocket);
+    // if (sessions.size === 0) {
+    //   delete rooms[roomId]; // Remove the room when there are no active sessions left
+    // }
   });
 });
