@@ -56,6 +56,7 @@ const parseQuery = (uri: string) => {
   const { pathname, query } = url.parse(decodeURIComponent(uri));
 
   const roomId = pathname?.slice(1) ?? DEFAULT_ID;
+  console.log(query);
   const username =
     query
       ?.split('&')
